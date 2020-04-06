@@ -121,14 +121,14 @@ suite('Functional Tests', function() {
        chai.request(server)
         .put('/travellers')
         /** send {surname: 'Colombo'} here **/
-        .send({name: 'Cristoforo', surname: 'Colombo', dates: '1451 - 1506'})
+        .send({surname: 'Colombo'})
         .end(function(err, res){
           
           /** your tests here **/
+          assert.equal(res.status, 200);
+          assert.equal(res.type, 'application/json');
           assert.equal(res.body.name, 'Cristoforo');
-          assert.equal(res.body.surname, 'Colombo');
-          assert.equal(res.body.dates, '1451 - 1506');
-          
+          assert.equal(res.body.surname, 'Colombo');          
           done(); // Never forget the 'done()' callback...
         });
       });

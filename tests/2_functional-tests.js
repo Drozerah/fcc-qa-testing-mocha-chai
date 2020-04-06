@@ -142,6 +142,9 @@ suite('Functional Tests', function() {
         .send({surname: "da Verrazzano"})
         /** place your tests inside the callback **/
         .end(function(err, res){
+          assert.equal(res.status, 200);
+          assert.equal(res.type, 'application/json');
+          assert.equal(res.body.name, 'Giovanni');
           assert.equal(res.body.surname, 'da Verrazzano');
           done();
         })

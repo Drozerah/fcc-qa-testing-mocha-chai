@@ -209,6 +209,7 @@ suite('Functional Tests', function() {
       
       // ### EXAMPLE ###
       test('#example - submit the input "surname" : "Polo"', function(done) {
+        console.log('#example') // !DEBUG
         browser
           .fill('surname', 'Polo')
           .pressButton('submit', function(){
@@ -231,7 +232,7 @@ suite('Functional Tests', function() {
       /** Now it's your turn. Please don't use the keyword #example in the title. **/
       
       test('submit "surname" : "Colombo" - write your e2e test...', function(done) {
-
+        console.log('=====>>> #1') // !DEBUG
         // fill the form...
         // then submit it pressing 'submit' button.
         //

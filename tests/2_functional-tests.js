@@ -241,7 +241,7 @@ suite('Functional Tests', function() {
         // assert that the text inside the element 'span#surname' is 'Colombo'
         // assert that the element(s) 'span#dates' exist and their count is 1
         browser
-          .fill('surname', 'Vespucci')
+          .fill('surname', 'Colombo')
           .pressButton('submit', function(){
             
             /** YOUR TESTS HERE, Don't forget to remove assert.fail() **/
@@ -251,7 +251,7 @@ suite('Functional Tests', function() {
             // assert that status is OK 200
             browser.assert.success();
             // assert that the text inside the element 'span#name' is 'Cristoforo'
-            browser.assert.text('span#name', 'Amerigo');
+            browser.assert.text('span#name', 'Cristoforo');
             // assert that the text inside the element 'span#surname' is 'Colombo'
             browser.assert.text('span#surname', 'Vespucci');
             // assert that the element(s) 'span#dates' exist and their count is 1
